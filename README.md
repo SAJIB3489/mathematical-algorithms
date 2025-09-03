@@ -19,9 +19,9 @@ It is designed to help learners and practitioners explore, implement, and experi
 
 **Learning Objectives:**
 
-    1. Understand the complete path from analog signals to digital representation.
-    2. Simulate each step in MATLAB: signal generation, sampling, quantization, and encoding.
-    3. Relate the concepts to IoT sensor data acquisition.
+1. Understand the complete path from analog signals to digital representation.
+2. Simulate each step in MATLAB: signal generation, sampling, quantization, and encoding.    
+3. Relate the concepts to IoT sensor data acquisition.
 
 #### 1. Analog Signal Generation
 
