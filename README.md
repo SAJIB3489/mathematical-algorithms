@@ -31,7 +31,7 @@ It is designed to help learners and practitioners explore, implement, and experi
     2. Plot and compare the effect on signal quality.
 
 
-**Analog** -> **Sampling** -> **Quantization** -> **Encoding** -> **Bitstream**
+1. **Analog** -> **Sampling** -> **Quantization** -> **Encoding** -> **Bitstream**
 
 
 ```Matlab
@@ -128,3 +128,12 @@ end
 | ---------------------------------------------------------------------------------------------| ------------------------------------------------------------------------------------- |
 
 
+2. **Comparison of Signal Quality**
+
+When I set the sampling frequency below the Nyquist rate (e.g., 150 Hz for a 100 Hz sine wave), I notice that the signal looks distorted. You can see aliasing, which means the sampled points no longer represent the true analog wave. The signal quality is very poor in this case, because we are not meeting the Nyquist theorem requirement.
+
+When I use the sampling frequency equal to the Nyquist rate (200 Hz), the sampled signal captures the basic shape of the sine wave, but it still looks jagged. You can tell that it barely contains enough information, and if you tried to reconstruct the original analog wave, the quality would not be smooth.
+
+When I increase the sampling frequency above Nyquist (for example 500 Hz), you and I can clearly see that the sampled signal follows the analog signal much more closely. The more points I take per cycle, the better the quality of the sampled signal becomes.
+
+For quantization, when I use fewer bits (such as 8 bits), you can notice that the quantized signal has visible step-like distortions. The resolution is low, so the signal quality is not very accurate compared to the sampled signal. As I increase to 16 bits, the steps become much smaller, and the quantized signal looks closer to the original. Finally, with 64 bits, the quantization error becomes almost invisible — you and I can see that the signal quality is nearly the same as the sampled signal.
