@@ -1,40 +1,3 @@
-
-<p align="center">
-<img src="https://github.com/user-attachments/assets/8a702f55-bca9-40c0-82e5-52398319f6dc" alt="savonia logo" width="400"/>
-</p>
-
-
-
-This repository serves as a playground and a comprehensive resource for understanding the professional course called `Mathematical Algorithms`.
-
-It is designed to help learners and practitioners explore, implement, and experiment with a wide range of algorithms that are fundamental to mathematics and computer science. The repository includes well-documented code examples, explanations, and problem-solving techniques that are commonly covered in a `Mathematical Algorithms` course.
-
-
-**Course Lecturer:** Osman Torunoglu
-
-
-
-
-## Assignment-1: From Analog to Digital Signals with MATLAB
-
-**Learning Objectives:**
-
-1. Understand the complete path from analog signals to digital representation.
-2. Simulate each step in MATLAB: signal generation, sampling, quantization, and encoding.    
-3. Relate the concepts to IoT sensor data acquisition.
-
-**Homework**
-
-    1. Modify the MATLAB script:
-        1.1. Try different sampling frequencies (below Nyquist, at Nyquist, and above Nyquist).
-        1.2. Use different quantization levels (8, 16, 64).
-    2. Plot and compare the effect on signal quality.
-
-
-**Analog** -> **Sampling** -> **Quantization** -> **Encoding** -> **Bitstream**
-
-
-```Matlab
 %% Analog to Digital Signal Processing Simulation
 
 clc; clear; close all; % Clear my workspace and command window
@@ -100,4 +63,3 @@ for Fs = Fs_values
         fprintf('Total bits: %d\n\n', length(bitstream));
     end
 end
-```
