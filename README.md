@@ -28,4 +28,4 @@ Now Naviagte the week specific exercises. For example
 cd week1-analog-to-digital-signal
 ```
 
-Each week exericse contain codes, README.md and plots.
+Each week exericse contains codes, README.md and plots.
