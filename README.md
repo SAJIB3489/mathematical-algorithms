@@ -11,3 +11,21 @@ It is designed to help learners and practitioners explore, implement, and experi
 
 
 **Course Lecturer:** Osman Torunoglu
+
+## Rune the code
+
+### Prerequisites
+- MATLAB or Matlab Online
+
+### Clone
+```bash
+git clone https://github.com/SAJIB3489/mathematical-algorithms.git
+cd mathematical-algorithms
+```
+
+Now Naviagte the week specific exercises. For example
+```bash
+cd week1-analog-to-digital-signal
+```
+
+Each week exericse contain codes, README.md and plots.
