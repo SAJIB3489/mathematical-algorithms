@@ -31,6 +31,6 @@ git clone https://github.com/SAJIB3489/mathematical-algorithms.git
 cd week2-signals-matlab 
 ```
 
-## Blog Post
+## Technical Blog
 
 Checkout my blog post to know about [Basic Signals in MATLAB for IoT and AI](https://dev.to/sajibpra/basic-signals-in-matlab-for-iot-and-ai-1k0k)
