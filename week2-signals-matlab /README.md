@@ -1,6 +1,6 @@
 ![image](/week2-signals-matlab%20/different-types-signals-plot.jpg)
 
-# Short description of each Singals
+# Short description of each Singal
 
 #### 1. Unit Impulse Signal
 I understand that the impulse signal is zero everywhere except at ``t=0``, where it has an infinitely large value. In MATLAB it is shown as a single spike at zero.
