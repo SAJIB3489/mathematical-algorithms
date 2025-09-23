@@ -29,7 +29,7 @@ That means the Z-transform converges everywhere, except at those isolated points
 
 **MATLAB**
 
-![]()
+![A1](/week3-Z-transform/A1.png)
 
 #### A2. Infinite Sequences & ROC
 
@@ -59,7 +59,7 @@ The ROC never includes the poles themselves. It is determined by where the sum c
 
 **MATLAB**
 
-![]()
+![A2](/week3-Z-transform/A2.png)
 
 
 #### A3. Properties: Linearity & Shifting
@@ -77,7 +77,7 @@ Z\{x_1[n-3]\} = z^{-3} X_1(z) = \frac{z^{-3}}{1 - 0.5 z^{-1}}
 
 **MATLAB**
 
-![]()
+![A3](/week3-Z-transform/A3.png)
 
 
 #### A4. Inverse Z-Transform
@@ -95,7 +95,7 @@ X(z) = \frac{1 - 0.5 z^{-1}}{1 - 0.8 z^{-1}} \implies x[n] = (0.8)^n u[n] - 0.5 
 
 **MATLAB**
 
-![]()
+![A4](/week3-Z-transform/A4.png)
 
 
 #### A5. H(z), Poles/Zeros & Frequency Response
@@ -108,12 +108,14 @@ H(z) = \frac{1 - 2.4 z^{-1} + 2.88 z^{-2}}{1 - 0.8 z^{-1} + 0.64 z^{-2}}
 
 **(a)** Plot poles and zeros with zplane, list their values.
 
-![]()
+![A5](/week3-Z-transform/pole-zeros.png)
+
+![A5.1](/week3-Z-transform/A5.png)
 
 
 **(b)** Plot magnitude and phase responses with freqz:
 
-![]()
+![A5.2](/week3-Z-transform/frequency-response.png)
 
 
 **(c)** Identify the filter type and justify.
@@ -138,18 +140,13 @@ After plotting, if you observe that the magnitude response is maximum at w = 0 a
 
 
 
-
-
 ## Run the code
 
 Clone the git repository
 
 ```bash
 git clone https://github.com/SAJIB3489/mathematical-algorithms.git
-cd week3-discrete-signals-matlab
+cd week3-Z-transform
 ```
 
-## Technical Blog
-
-Checkout my blog post to know about [Exploring Discrete-Time Signals with MATLAB](https://dev.to/sajibpra/exploring-discrete-time-signals-with-matlab-6j)
 
