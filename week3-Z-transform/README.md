@@ -31,6 +31,11 @@ That means the Z-transform converges everywhere, except at those isolated points
 
 ![A1](/week3-Z-transform/A1.png)
 
+
+**Reflections**
+
+I learned that finite sequences always map to polynomials in \( z^{-1} \), which makes their Z-transform straightforward to compute and interpret. The ROC for such sequences covers almost the entire z-plane, so convergence is rarely an issue. MATLAB’s symbolic tools made it quick to confirm my hand calculations.
+
 ### A2. Infinite Sequences & ROC
 
 For each sequence, derive X(z) and specify the ROC. Then, verify using symbolic MATLAB where possible.
@@ -62,6 +67,11 @@ The ROC never includes the poles themselves. It is determined by where the sum c
 ![A2](/week3-Z-transform/A2.png)
 
 
+**Reflections**
+
+Working with infinite sequences, I noticed the ROC is defined by the magnitude of the sequence’s base (the pole). Right-sided sequences converge outside the pole, while left-sided ones converge inside. Using MATLAB allowed me to verify these properties and see how ROC and pole location are connected in practice.
+
+
 ### A3. Properties: Linearity & Shifting
 
 
@@ -80,6 +90,10 @@ Z\{x_1[n-3]\} = z^{-3} X_1(z) = \frac{z^{-3}}{1 - 0.5 z^{-1}}
 ![A3](/week3-Z-transform/A3.png)
 
 
+**Reflections**
+
+I applied linearity and shifting directly in the Z-domain and confirmed the results with MATLAB. This reinforced my understanding that Z-transform properties make analyzing and manipulating signals algebraically much easier. MATLAB’s symbolic computation gave me confidence in my manual calculations.
+
 ### A4. Inverse Z-Transform
 
 
@@ -96,6 +110,11 @@ X(z) = \frac{1 - 0.5 z^{-1}}{1 - 0.8 z^{-1}} \implies x[n] = (0.8)^n u[n] - 0.5 
 **MATLAB**
 
 ![A4](/week3-Z-transform/A4.png)
+
+
+**Reflections**
+
+Finding the inverse Z-transform, I saw that knowing the pole locations and the ROC allows me to quickly write down the time-domain sequence. Using MATLAB’s `iztrans` tool provided an immediate check and helped me connect the Z-domain expressions to discrete-time signals.
 
 
 ### A5. H(z), Poles/Zeros & Frequency Response
@@ -132,6 +151,10 @@ From pole-zero plot:
 
 After plotting, if you observe that the magnitude response is maximum at w = 0 and minimum at w = π , and the poles are near the real axis close to 1, then it's a low-pass filter. The zeros, if located near z = 1 , will create a notch at DC, but in this case, zeros/poles locations and the flat passband at low frequencies confirm the low-pass behavior.
 
+
+**Reflections**
+
+By plotting poles, zeros, and the frequency response of the digital filter, I learned how the position of these features shapes the filter’s characteristics. MATLAB’s visualization tools gave me a clear picture of filter type and behavior, making abstract concepts concrete and easier to interpret.
 
 ----------------------------------------------------
 
