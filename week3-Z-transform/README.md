@@ -130,8 +130,6 @@ From pole-zero plot:
     If poles are near the unit circle at low angles, the filter passes low frequencies (low-pass).
     If poles are near w = π (negative real axis), it is high-pass.
 
-Justification:
-
 After plotting, if you observe that the magnitude response is maximum at w = 0 and minimum at w = π , and the poles are near the real axis close to 1, then it's a low-pass filter. The zeros, if located near z = 1 , will create a notch at DC, but in this case, zeros/poles locations and the flat passband at low frequencies confirm the low-pass behavior.
 
 
