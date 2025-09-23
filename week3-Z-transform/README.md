@@ -1,7 +1,7 @@
-# Short description of each Discrete Singal
+# Z Transform
 
 
-#### A1. Warm‑up: Finite Sequences → Polynomials
+### A1. Warm‑up: Finite Sequences → Polynomials
 
 **(a)** For each sequence, write X(z) explicitly as a polynomial in z^{-1} and verify with MATLAB symbolic tools.
 
@@ -31,7 +31,7 @@ That means the Z-transform converges everywhere, except at those isolated points
 
 ![A1](/week3-Z-transform/A1.png)
 
-#### A2. Infinite Sequences & ROC
+### A2. Infinite Sequences & ROC
 
 For each sequence, derive X(z) and specify the ROC. Then, verify using symbolic MATLAB where possible.
 
@@ -62,7 +62,7 @@ The ROC never includes the poles themselves. It is determined by where the sum c
 ![A2](/week3-Z-transform/A2.png)
 
 
-#### A3. Properties: Linearity & Shifting
+### A3. Properties: Linearity & Shifting
 
 
 **Linearity:**  
@@ -80,7 +80,7 @@ Z\{x_1[n-3]\} = z^{-3} X_1(z) = \frac{z^{-3}}{1 - 0.5 z^{-1}}
 ![A3](/week3-Z-transform/A3.png)
 
 
-#### A4. Inverse Z-Transform
+### A4. Inverse Z-Transform
 
 
 **a.**  
@@ -98,7 +98,7 @@ X(z) = \frac{1 - 0.5 z^{-1}}{1 - 0.8 z^{-1}} \implies x[n] = (0.8)^n u[n] - 0.5 
 ![A4](/week3-Z-transform/A4.png)
 
 
-#### A5. H(z), Poles/Zeros & Frequency Response
+### A5. H(z), Poles/Zeros & Frequency Response
 
 Filter frequency response
 
