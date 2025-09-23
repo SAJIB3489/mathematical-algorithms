@@ -27,6 +27,20 @@ So, the Region of Convergence (ROC) is the entire \( z \)-plane, except possibly
 That means the Z-transform converges everywhere, except at those isolated points.  
 
 
+### Finite Sequences and Z-Transform
+
+We can write the Z-transform of a finite sequence as a polynomial in $z^{-1}$:
+
+$$
+X(z) = \sum_{n=0}^{N} x[n] z^{-n}
+$$
+
+It has no poles (except maybe at $z = 0$).
+So, the Region of Convergence (ROC) is the entire $z$-plane, except possibly at $z = 0$ or $z = \infty$.
+
+That means the Z-transform converges everywhere, except at those isolated points.
+
+
 
 ### **A2 – Infinite Sequences & ROC**
 
