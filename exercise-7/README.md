@@ -1,4 +1,4 @@
-![image](/exercise-6/Figure_1_Exercise_7.png)
+![image](/exercise-7/Figure_1_Exercise_7.png)
 
 # Short description of my learning outcome
 
