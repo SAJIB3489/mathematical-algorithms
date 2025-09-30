@@ -5,24 +5,26 @@
 
 
 ## FIR (Finite Impulse Response)
-        What it is: Feedforward only; output uses a finite number of past inputs.
-        Why you use it: Guaranteed stability, can have exactly linear phase, simple to design and implement.
-        Trade‑off: Often needs more taps (more compute and delay) for sharp filtering.
-        Example: Moving average
-            y[n] = (1/N) Σ_{k=0}^{N-1} x[n−k]
+
+What it is: Feedforward only; output uses a finite number of past inputs.
+Why you use it: Guaranteed stability, can have exactly linear phase, simple to design and implement.
+Trade‑off: Often needs more taps (more compute and delay) for sharp filtering.
+Example: Moving average
+y[n] = (1/N) Σ_{k=0}^{N-1} x[n−k]
 
 
 ## IIR (Infinite Impulse Response)
-        What it is: Uses feedback; output depends on past outputs too.
-        Why I use it: Much more efficient (sharp roll‑off with low order), low latency for similar magnitude specs.
-        Trade‑off: Phase is usually nonlinear; we must ensure poles are inside the unit circle for stability; more sensitive to quantization.
-        Example: One‑pole low‑pass
-            y[n] = α x[n] + (1−α) y[n−1], 0<α<1
+
+What it is: Uses feedback; output depends on past outputs too.
+Why I use it: Much more efficient (sharp roll‑off with low order), low latency for similar magnitude specs.
+Trade‑off: Phase is usually nonlinear; we must ensure poles are inside the unit circle for stability; more sensitive to quantization.
+Example: One‑pole low‑pass
+y[n] = α x[n] + (1−α) y[n−1], 0<α<1
 
 ## How we choose:
 
-    If you need linear phase and guaranteed stability, we pick FIR.
-    If we need sharp response with minimal order/latency and can tolerate phase distortion (or we’ll compensate it), we pick IIR.
+If you need linear phase and guaranteed stability, we pick FIR.
+If we need sharp response with minimal order/latency and can tolerate phase distortion (or we’ll compensate it), we pick IIR.
 
 
 ## FIR vs. IIR filters
