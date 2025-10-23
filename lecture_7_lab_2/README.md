@@ -7,7 +7,7 @@
 | <p align="center"><img src="/lecture_7_lab_2/Lab_2_Figure_2.png"/><br/>Figure 2</p> | <p align="center"><img src="/lecture_7_lab_2/Lab_2_Figure_3.png"/><br/>Figure 3</p> | 
 | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 
-| <p align="center"><img src="/lecture_7_lab_2/Lab_2_Figure_5.png"/><br/>Figure 4</p> | <p align="center"><img src="/lecture_7_lab_2/Lab_2_Figure_6.png"/><br/>Figure 5</p> |
+| <p align="center"><img src="/lecture_7_lab_2/Lab_2_Figure_4.png"/><br/>Figure 4</p> | <p align="center"><img src="/lecture_7_lab_2/Lab_2_Figure_5.png"/><br/>Figure 5</p> |
 | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | 
 
 
