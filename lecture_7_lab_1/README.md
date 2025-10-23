@@ -1,6 +1,9 @@
 # Results
 
-![image](/lecture_7_lab_1/Lab_1_Figure_1.png)
+| <p align="center"><img src="/lecture_7_lab_1/Lab_1_Figure_1.png"/><br/>Figure 1</p> |
+| ---------------------------------------------------------------------------------- |
+
+
 | <p align="center"><img src="/lecture_7_lab_1/Lab_1_Figure_2.png"/><br/>Figure 2</p> | <p align="center"><img src="/lecture_7_lab_1/Lab_1_Figure_3.png"/><br/>Figure 3</p> | <p align="center"><img src="/lecture_7_lab_1/Lab_1_Figure_4.png"/><br/>Figure 4</p> |
 | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 
