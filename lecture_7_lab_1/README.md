@@ -1,12 +1,10 @@
 # Results
 
 ![image](/lecture_7_lab_1/Lab_1_Figure_1.png)
-![image](/lecture_7_lab_1/Lab_1_Figure_2.png)
-![image](/lecture_7_lab_1/Lab_1_Figure_3.png)
-![image](/lecture_7_lab_1/Lab_1_Figure_4.png)
-![image](/lecture_7_lab_1/Lab_1_Figure_5.png)
-![image](/lecture_7_lab_1/Lab_1_Figure_6.png)
-![image](/lecture_7_lab_1/Lab_1_Figure_7.png)
+![image](/lecture_7_lab_1/Lab_1_Figure_2.png) ![image](/lecture_7_lab_1/Lab_1_Figure_3.png) ![image](/lecture_7_lab_1/Lab_1_Figure_4.png)
+
+![image](/lecture_7_lab_1/Lab_1_Figure_5.png) ![image](/lecture_7_lab_1/Lab_1_Figure_6.png) ![image](/lecture_7_lab_1/Lab_1_Figure_7.png)
+
 
 
 ### 0) Load and inspect an image
