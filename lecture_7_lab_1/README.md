@@ -12,7 +12,6 @@
 
 
 
-
 ### 0) Load and inspect an image
 
 I started by loading the image (peppers.png or cameraman.tif) and converting it to grayscale. This helps focus only on brightness (luminance) instead of color, which is important for understanding sampling and quantization. I also checked the image size and pixel value range to know what I’m working with.
