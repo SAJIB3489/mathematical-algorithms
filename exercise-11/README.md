@@ -26,5 +26,5 @@ Clone the git repository
 
 ```bash
 git clone https://github.com/SAJIB3489/mathematical-algorithms.git
-cd exercise-10
+cd exercise-11
 ```
