@@ -1,6 +1,6 @@
-Author: Md Sajib Pramanic
-Course: Mathematical Algorithms (DSP) — Image Processing Labs
-MATLAB Version: R2025a
+**Author:** Md Sajib Pramanic  
+**Course:** Mathematical Algorithms (DSP)
+**MATLAB Version:** R2025a
 
 
 # Results
