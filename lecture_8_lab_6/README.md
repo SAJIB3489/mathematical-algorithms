@@ -6,7 +6,7 @@
 
 
 
-### Section 1 – Load your own image
+### Section 1 – Load image
 
 I loaded fabric image and converted it to grayscale.
 This makes processing easier and faster by using only one channel.
