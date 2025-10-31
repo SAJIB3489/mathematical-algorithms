@@ -1,4 +1,4 @@
-%% Lab 6: Mini Project – Your Image Pipeline
+%% Lab 6: Mini Project - Your Image Pipeline
 %%Md Sajib Pramanic
 
 
