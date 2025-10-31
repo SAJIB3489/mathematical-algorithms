@@ -7,6 +7,36 @@
 | <p align="center"><img src="/lecture_8_lab_4/Lab_4_Figure_2.png"/><br/>Figure 2</p> | <p align="center"><img src="/lecture_8_lab_4/Lab_4_Figure_3.png"/><br/>Figure 3</p> |
 | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 
+### Section 1 – Add different noise types
+
+In this part, I added Gaussian noise and salt & pepper noise to the image.
+This helps to see how different noise types affect image quality.
+
+
+### Section 2 – Compute simple quality metrics
+
+Here, I calculated the Mean Squared Error (MSE) to measure how much the noisy images differ from the original.
+A higher MSE means more distortion.
+
+
+### Section 3 – Linear filtering (mean, Gaussian)
+
+I used average and Gaussian filters to reduce noise.
+These filters smooth the image but also make edges blurry.
+
+
+### Section 4 – Non-linear filtering (median)
+
+I used the median filter, which removes noise by replacing each pixel with the median value of its neighbors.
+It works well for salt and pepper noise and keeps edges sharper.
+
+
+### Section 5 – Compare metrics after filtering
+
+I compared MSE values after filtering to check which filter gave better results.
+The median filter showed better performance on salt and pepper noise.
+
+
 
 ### Reflection
 
