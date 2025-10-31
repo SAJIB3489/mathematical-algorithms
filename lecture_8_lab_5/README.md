@@ -10,7 +10,10 @@
 | <p align="center"><img src="/lecture_8_lab_5/Lab_5_Figure_4.png"/><br/>Figure 4</p> | <p align="center"><img src="/lecture_8_lab_5/Lab_5_Figure_5.png"/><br/>Figure 5</p> |
 | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | 
 
+What ChatGPT generates:
 
+| <p align="center"><img src="/lecture_8_lab_5/chatgpt.png"/><br/>ChatGPT generated Image in the class</p> |
+| ---------------------------------------------------------------------------------- |
 
 ### Section 1 – Basic derivative filters (Sobel, Prewitt)
 
