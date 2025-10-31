@@ -1,6 +1,6 @@
 # Results
 
-| <p align="center"><img src="/lecture_8_lab_6/Lab_8_Figure_1.png"/><br/>Figure 1</p> |
+| <p align="center"><img src="/lecture_8_lab_6/Lab_6_Figure_1.png"/><br/>Figure 1</p> |
 | ---------------------------------------------------------------------------------- |
 
 
