@@ -42,7 +42,7 @@ This helps to count and visualize different segmented objects.
 1. The Canny filter gives the thinnest and cleanest edges.
 2. It works better than Sobel or Prewitt because it removes noise and uses double thresholds.
 3. The Otsu method relates to histogram thresholding because it chooses the best split between dark and bright pixels automatically.
----
+----
 
 
 ## Run the code
