@@ -1,3 +1,8 @@
+Author: Md Sajib Pramanic
+Course: Mathematical Algorithms (DSP) — Image Processing Labs
+MATLAB Version: R2025a
+
+
 # Results
 
 | <p align="center"><img src="/lecture_7_lab_2/Lab_2_Figure_1.png"/><br/>Figure 1</p> |
