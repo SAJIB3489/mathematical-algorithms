@@ -1,43 +1,112 @@
 **Author:** Md Sajib Pramanic  
+
 **Course:** Mathematical Algorithms (DSP) 
+
 **MATLAB Version:** R2025a
+
 
 # Results
 
-| <p align="center"><img src="/lecture_9_lab_7/Effect_of_Preprocessing_on_CNN_Classification.png"/><br/>Figure 1</p> |
+| <p align="center"><img src="/lecture_9_lab_7/figure_7.png"/><br/>Figure 1</p> |
 | ---------------------------------------------------------------------------------- |
 
 
-### **Overview**
+## 1. Objective
 
-This project demonstrates how combining **traditional image preprocessing techniques** with **AI-based denoising** can improve the performance of a **pre-trained Convolutional Neural Network (CNN)** in image classification tasks. The experiment compares three different input conditions to show how preprocessing affects classification accuracy.
+This experiment demonstrates how different image filtering methods handle **Gaussian noise**. The task includes:
 
----
-
-### **Objectives**
-
-1. Apply **traditional preprocessing** (noise removal and contrast enhancement) to improve image quality.
-2. Apply **AI-based denoising** using the **DnCNN** deep learning model.
-3. Use a **pre-trained CNN classifier (AlexNet)** for image classification.
-4. Evaluate and compare classification results across:
-
-   * Raw noisy images
-   * Traditionally pre-processed images
-   * AI-denoised (DnCNN) images
+* Adding **Gaussian noise** to a clean image.
+* Measuring image quality using **MSE, PSNR, and SSIM**.
+* Comparing **traditional filters** (Mean, Median, Gaussian Blur) with an **AI-based pre-trained DnCNN model**.
+* Providing both **quantitative results** and **visual observations**.
 
 ---
 
-### **Methods Used**
+## 2. Noise Modeling
 
-| Stage                     | Technique                            | Purpose                                    |
-| ------------------------- | ------------------------------------ | ------------------------------------------ |
-| Noise Simulation          | Gaussian Noise                       | To degrade image intentionally for testing |
-| Traditional Preprocessing | Wiener Filter + Contrast Enhancement | Noise reduction using classical methods    |
-| AI Preprocessing          | DnCNN Pre-Trained Denoiser           | Deep learning-based noise removal          |
-| Image Classification      | AlexNet (Pre-trained CNN)            | Recognizes objects in images               |
-| Comparison                | Output Class Labels                  | Evaluates classification improvement       |
+Gaussian noise was added to the original grayscale image:
+
+[
+I_{noisy} = I_{original} + N(0, \sigma^2)
+]
+
+In this experiment:
+
+* Noise standard deviation: **σ = 0.04**
+* MATLAB function used: `imnoise(originalImage, 'gaussian', 0, σ²)`
 
 ---
+
+## 3. Filters Compared
+
+| Filter            | Type       | Description                                                                    |
+| ----------------- | ---------- | ------------------------------------------------------------------------------ |
+| **Mean Filter**   | Linear     | Averages neighborhood pixels, smooths noise but blurs edges.                   |
+| **Median Filter** | Non-linear | Preserves edges better, commonly used for salt-and-pepper noise.               |
+| **Gaussian Blur** | Linear     | Weighted smoothing, reduces noise softly but still causes blurring.            |
+| **DnCNN**         | AI / CNN   | Deep learning model trained to remove Gaussian noise while preserving texture. |
+
+---
+
+## 4. Image Quality Metrics
+
+The following metrics were computed:
+
+* **MSE (Mean Square Error)** – lower is better
+* **PSNR (Peak Signal-to-Noise Ratio)** – higher is better
+* **SSIM (Structural Similarity Index)** – higher is better (closer to original image structure)
+
+```matlab
+mseVal = immse(filteredImage, originalImage);
+psnrVal = psnr(filteredImage, originalImage);
+ssimVal = ssim(filteredImage, originalImage);
+```
+
+---
+
+## 5. Visual Observation Results
+
+### **Original vs. Noisy**
+
+* The noisy image appears grainy.
+* Noise distorts fine details and contrast.
+
+### **Mean Filter**
+
+* Noise is reduced somewhat.
+* **Significant blurring** occurs.
+* Edges become less sharp.
+
+### **Median Filter**
+
+* Preserves edges better than Mean filter.
+* Works best for **impulsive noise**, but **less effective for Gaussian noise**.
+* Slight improvement but detail still lost.
+
+### **Gaussian Blur**
+
+* Produces a smooth and visually pleasing result.
+* However, edges still lose sharpness.
+* Some fine textures are washed out.
+
+### **AI-Based DnCNN (Best Result)**
+
+* **Noise is removed effectively** while **preserving small details and edges**.
+* Produces the **highest PSNR and SSIM** values.
+* Looks **closest to the original image** compared to traditional methods.
+
+---
+
+## 6. Conclusion
+
+| Method         | Noise Removal         | Edge Preservation | Overall Effectiveness |
+| -------------- | --------------------- | ----------------- | --------------------- |
+| Mean Filter    | Moderate              | Poor              | Low                   |
+| Median Filter  | Moderate for Gaussian | Good              | Medium                |
+| Gaussian Blur  | Moderate              | Medium            | Medium                |
+| **AI (DnCNN)** | **Excellent**         | **Excellent**     | **High (Best)**       |
+
+
 
 ## Run the code
 
@@ -52,30 +121,5 @@ cd lecture_9_lab_7
 
 1. Place the MATLAB script and sample image (`cameraman.tif` or your own dataset) in the same folder.
 2. Open MATLAB and run the script:
-
-   ```matlab
-   run('classification_comparison.m')
-   ```
-3. The script will:
-
-   * Add noise to the image
-   * Apply preprocessing methods
-   * Perform classification using AlexNet
-   * Display comparison results
-
----
-
-### Hybrid Pipeline Images
-
-![image](/lecture_9_lab_7/Hybrid_Pipeline_Images.png)
-
-
-### **Conclusion**
-
-* CNN classification accuracy is **lowest** when using **raw noisy images**.
-* **Traditional preprocessing** improves classification but may blur important features.
-* **AI-based DnCNN preprocessing provides the best results**, because it removes noise **while preserving critical image details** needed for classification.
-
-**Therefore, combining traditional + AI preprocessing yields the most robust classification results**, demonstrating the benefit of hybrid image processing workflows.
 
 ---
