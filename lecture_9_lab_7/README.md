@@ -65,6 +65,10 @@ cd lecture_9_lab_7
 
 ---
 
+### Hybrid Pipeline Images
+
+![image](/lecture_9_lab_7/Hybrid_Pipeline_Images.png)
+
 
 ### **Conclusion**
 
