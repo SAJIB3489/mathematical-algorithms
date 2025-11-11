@@ -11,6 +11,8 @@
 | <p align="center"><img src="/lecture_9_lab_8/figure_8.png"/><br/>Figure 1</p> |
 | ---------------------------------------------------------------------------------- |
 
+![image](/lecture_9_lab_8/figure_8.png)
+
 
 ## Overview
 
