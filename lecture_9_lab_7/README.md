@@ -75,15 +75,3 @@ cd lecture_9_lab_7
 **Therefore, combining traditional + AI preprocessing yields the most robust classification results**, demonstrating the benefit of hybrid image processing workflows.
 
 ---
-
-
-
-
-## Run the code
-
-Clone the git repository
-
-```bash
-git clone https://github.com/SAJIB3489/mathematical-algorithms.git
-cd lecture_8_lab_6
-```
