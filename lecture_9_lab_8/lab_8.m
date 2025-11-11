@@ -1,35 +1,60 @@
-%% Lab 6: Mini Project - Your Image Pipeline
-%%Md Sajib Pramanic
-
+%Md Sajib Pramanic
+%Lab 8 Hybrid Traditional + AI Pipeline with Comparison
 
 close all; clear; clc;
 
-% 1) Load your own image (object, face, landscape, etc.)
-I = im2double(rgb2gray(imread('fabric.png')));
-I = imnoise(I, 'gaussian', 0,0.001);
+% ---------------------------------------------------
+% Section 1: Load Image and AI Network
+% ---------------------------------------------------
+targetImage = imread('peppers.png'); % Sample image
+disp('Loading pre-trained AI network (SqueezeNet)...');
+net = squeezenet;
+disp('Network loaded.');
 
+figure('Name', 'Hybrid Pipeline Comparison');
+subplot(2,3,1); imshow(targetImage); title('Original Image');
 
-% 2) Pre-process: noise removal
-I_filt = medfilt2(I,[3 3]);
+% ---------------------------------------------------
+% Section 2: Baseline AI Classification (Original Image)
+% ---------------------------------------------------
+inputSize = net.Layers(1).InputSize;
+resizedOriginal = imresize(targetImage, [inputSize(1) inputSize(2)]);
+[YPredOriginal, probsOriginal] = classify(net, resizedOriginal);
+subplot(2,3,2); imshow(resizedOriginal); title('Original Image to AI');
+fprintf('\n--- Baseline Classification ---\n');
+fprintf('Original Image classified as: %s (Confidence: %.2f%%)\n', ...
+    string(YPredOriginal), max(probsOriginal)*100);
 
-% 3) Enhance contrast
-I_enh = imadjust(I_filt,[0.2 0.8],[0 1]);
+% ---------------------------------------------------
+% Section 3: Traditional Method (K-Means Segmentation)
+% ---------------------------------------------------
+disp('Applying traditional color segmentation (K-Means)...');
+imgLab = rgb2lab(targetImage);
+ab = im2single(imgLab(:,:,2:3));
+pixelLabels = imsegkmeans(ab, 2); % Cluster into 2 colors
 
-% 4) Extract features (edges or frequency)
-edges = edge(I_enh,'Canny',[0.1 0.25]);
+mask = pixelLabels == 2; % Assume Cluster 2 is the object
+isolatedObject = targetImage;
+isolatedObject(repmat(~mask,1,1,3)) = 0; % Mask background
+subplot(2,3,3); imshow(mask); title('Traditional Mask (K-Means)');
+subplot(2,3,4); imshow(isolatedObject); title('Isolated Object');
 
-% 5) Optional frequency-domain mask
-F = fftshift(fft2(I_enh));
-[M,N]=size(F);
-[u,v]=meshgrid(-N/2:N/2-1,-M/2:M/2-1);
-H = double(sqrt(u.^2+v.^2)<60);
-I_lp = real(ifft2(ifftshift(F.*H)));
+% ---------------------------------------------------
+% Section 4: AI Classification on Isolated Object
+% ---------------------------------------------------
+resizedObject = imresize(isolatedObject, [inputSize(1), inputSize(2)]);
+[YPredHybrid, probsHybrid] = classify(net, resizedObject);
+subplot(2,3,5); imshow(resizedObject); title('Input to AI (Hybrid)');
 
-% 6) Visualization
-figure; montage({I, I_filt, I_enh, edges, I_lp},'Size',[1 5]);
-title('Original | Denoised | Enhanced | Edges | LP result');
+% ---------------------------------------------------
+% Section 5: Quantitative & Visual Analysis
+% ---------------------------------------------------
+fprintf('\n--- Hybrid Pipeline Classification ---\n');
+fprintf('Isolated Object classified as: %s (Confidence: %.2f%%)\n', ...
+    string(YPredHybrid), max(probsHybrid)*100);
 
-%% 7) Report
-% - Describe your processing pipeline.
-% - Explain how each stage relates to DSP operations.
-% - Discuss improvements or limitations.
+fprintf('\n--- Comparison ---\n');
+fprintf('Original Image -> AI: %s (%.2f%%)\n', string(YPredOriginal), max(probsOriginal)*100);
+fprintf('Hybrid (Traditional + AI) -> AI: %s (%.2f%%)\n', string(YPredHybrid), max(probsHybrid)*100);
+
+disp('Observation: Traditional segmentation helps the AI focus on the main object, often improving classification confidence and accuracy.');
