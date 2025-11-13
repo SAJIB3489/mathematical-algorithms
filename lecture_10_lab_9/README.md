@@ -82,16 +82,13 @@ git clone https://github.com/SAJIB3489/mathematical-algorithms.git
 cd lecture_10_lab_9
 ```
 
-
-2. Open MATLAB and navigate to the repository folder.
-
-3. Run the main script:
+2. Run the main script:
 
 ```matlab
 tire_stud_detector.m
 ```
 
-4. The script will:
+3. The script will:
 
    * Read both images (`studded_tire.jpeg` and `summer_tire.jpg`)
    * Detect and count studs
