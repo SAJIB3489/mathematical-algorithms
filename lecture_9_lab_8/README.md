@@ -45,7 +45,7 @@ Clone the git repository
 
 ```bash
 git clone https://github.com/SAJIB3489/mathematical-algorithms.git
-cd lecture_9_lab_7
+cd lecture_9_lab_8
 ```
 
 ### **How to Run**
