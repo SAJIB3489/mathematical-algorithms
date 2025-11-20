@@ -15,21 +15,12 @@
 
 ## Low-Light Image Enhancement Demo
 
-This study demonstrates how to use a **pretrained “Learning to See in the Dark” (SID-style)** deep-learning model in MATLAB **without needing the full SID dataset or training the model yourself**.
+This exercise demonstrates how to use a **pretrained “Learning to See in the Dark” (SID-style)** deep-learning model in MATLAB **without needing the full SID dataset or training the model yourself**.
 The script loads a pretrained low-light enhancement network, simulates a dark/noisy image, and then uses the model to brighten and clean it.
 
 ---
 
-## **What the Script Does**
-
-### **1. Download the Pretrained Model (first run only)**
-
-* Creates a folder in MATLAB’s temporary directory.
-* Checks if the pretrained `.mat` model exists.
-* If not, it downloads a small ZIP file from MathWorks and extracts it.
-* This gives you a ready-to-use `netTrained` network.
-
-### **2. Load the Network**
+### **1. Load the Network**
 
 ```matlab
 load(modelFile, "netTrained");
@@ -37,11 +28,11 @@ load(modelFile, "netTrained");
 
 This loads a deep neural network that mimics a camera pipeline for extremely low-light enhancement.
 
-### **3. Load a Normal RGB Image**
+### **2. Load a Normal RGB Image**
 
 The script reads an example image (`dark_house.png`), resizes it, and converts it to `single` precision.
 
-### **4. Simulate a Dark + Noisy Image**
+### **3. Simulate a Dark + Noisy Image**
 
 To avoid needing real RAW low-light data:
 
@@ -50,7 +41,7 @@ To avoid needing real RAW low-light data:
 
 This produces a “fake” low-light image that the network can try to enhance.
 
-### **5. Create a Fake RAW 4-Channel Input**
+### **4. Create a Fake RAW 4-Channel Input**
 
 The SID model expects a 4-channel RAW-like input.
 Since we don’t have real RAW images, the script:
@@ -58,11 +49,11 @@ Since we don’t have real RAW images, the script:
 * Converts the RGB image to grayscale.
 * Replicates it into 4 channels.
 
-### **6. Convert to `dlarray` and Send to GPU (optional)**
+### **5. Convert to `dlarray` and Send to GPU (optional)**
 
 The input is wrapped in a format the network understands (`SSCB`) and optionally moved to the GPU for faster inference.
 
-### **7. Run the Model**
+### **6. Run the Model**
 
 ```matlab
 out = predict(netTrained, input);
@@ -70,11 +61,11 @@ out = predict(netTrained, input);
 
 This produces an enhanced 3-channel RGB output.
 
-### **8. Convert the Output Back to a Normal Image**
+### **7. Convert the Output Back to a Normal Image**
 
 The network output is gathered from GPU/dlarray format and converted to `uint8`.
 
-### **9. Display Results**
+### **8. Display Results**
 
 The script shows three images side by side:
 
